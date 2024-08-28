@@ -253,4 +253,31 @@ def main():
                 print("6. Export to Excel")
                 print("7. Logout")
 
-                choice = input("Enter your
+                choice = input("Enter your choice: ")
+
+                if choice == '1':
+                    add_transaction(transactions, user)
+                elif choice == '2':
+                    view_transactions(transactions, user)
+                elif choice == '3':
+                    summarize_transactions(transactions)
+                elif choice == '4':
+                    detailed_summary(transactions, user)
+                elif choice == '5':
+                    plot_summary(transactions)
+                elif choice == '6':
+                    export_to_excel(transactions)
+                elif choice == '7':
+                    print("Logging out...")
+                    break
+                else:
+                    print("Invalid choice. Please select a valid option.")
+
+        elif choice == '3':
+            print("Exiting program. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please select a valid option.")
+
+if __name__ == "__main__":
+    main()
